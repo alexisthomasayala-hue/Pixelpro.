@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="todo.css">
 </head>
 <body>
+    <!-- Reloj en la parte superior -->
+    <div id="reloj"></div>
+
     <div class="contenido-principal">
         <h1>PixelPro🎮 - Blog de Videojuegos: Castor7</h1>
         <h2>Nuevo lanzamiento: Castor7, estrategia y supervivencia en el bosque</h2>  
@@ -29,6 +32,30 @@
         </div>
     </div>
 
+    <!-- Galería de Imágenes Ordenada -->
+    <div class="galeria-contenedor">
+        <h3>Galería de Castor7</h3>
+        <div class="miniaturas">
+            <img src="img/image 1.png" alt="Castor 1" class="galeria-img">
+            <img src="img/image 3.png" alt="Castor 3" class="galeria-img">
+            <img src="img/image 4.png" alt="Castor 4" class="galeria-img">
+            <img src="img/image 5.png" alt="Castor 5" class="galeria-img">
+            <img src="img/image 6.png" alt="Castor 6" class="galeria-img">
+            <img src="img/image 7.png" alt="Castor 7" class="galeria-img">
+            <img src="img/image 9.png" alt="Castor 9" class="galeria-img">
+            <img src="img/image 10.png" alt="Castor 10" class="galeria-img">
+        </div>
+    </div>
+
+    <!-- Modal Limpio y Ordenado para el Zoom -->
+    <div id="modalZoom" class="modal-galeria">
+        <button id="btnAnterior" class="btn-control">❮</button>
+        <div class="modal-contenido-imagen">
+            <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+        </div>
+        <button id="btnSiguiente" class="btn-control">❯</button>
+    </div>
+
     <!-- Menú de navegación unificado -->
     <div class="menu-navegacion">
         <a href="blog.html">Blog</a>
@@ -48,9 +75,7 @@
         <a href="ubicacion sucursal.html">Ubicación Sucursal</a>
         <a href="formulario.html">Formulario</a>
     </div>
-    <script src="todo.js"></script>
-    <!-- Reloj en la parte superior -->
-<div id="reloj"></div>
 
+    <script src="todo.js"></script>
 </body>
 </html>
