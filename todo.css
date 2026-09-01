@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(37, 51, 88);
+    background-color: rgb(105, 121, 165);
     color: #f8fafc;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -81,4 +81,24 @@ button:hover {
 .menu-navegacion a:hover {
     color: #10b981;
     text-decoration: underline;
+}
+/* Estilo para fijar el reloj en la esquina superior */
+#reloj {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+    z-index: 9999; /* Asegura que esté siempre por encima de todo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Ajuste automático para el modo oscuro si lo usas */
+body.dark-mode #reloj {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #e0e0e0;
 }
