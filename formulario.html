@@ -6,22 +6,36 @@
     <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <form action="/ruta-de-procesamiento" method="POST">
+    <!-- Reloj flotante superior -->
+    <div id="reloj"></div>
+
+    <!-- Interruptor de Modo Oscuro (Opcional en la página) -->
+    <div style="padding: 10px;">
+        <label>
+            <input type="checkbox" id="modoOscuroToggle"> Modo Oscuro
+        </label>
+    </div>
+
+    <!-- Formulario SIN action ni method para evitar errores de servidor -->
+    <form id="formRegistro" novalidate>
         <h1>PixelPro🎮 - Registro de Usuario</h1>
 
         <div>
             <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre">
+            <span id="errorNombre" class="error-mensaje"></span>
         </div>
 
         <div>
             <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email">
+            <span id="errorEmail" class="error-mensaje"></span>
         </div>
 
         <div>
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password">
+            <span id="errorPassword" class="error-mensaje"></span>
         </div>
 
         <div>
@@ -38,13 +52,17 @@
         </div>
 
         <div style="border:none; padding:0; margin-bottom: 15px;">
-            <input type="checkbox" id="terminos" name="terminos" required>
+            <input type="checkbox" id="terminos" name="terminos">
             <label for="terminos">Acepto los términos y condiciones</label>
+            <span id="errorTerminos" class="error-mensaje"></span>
         </div>
 
         <div>
             <button type="submit">Registrarse</button>
         </div>
+
+        <!-- Contenedor donde aparecerá el resumen antes de guardar -->
+        <div id="contenedorResumen" style="display: none;"></div>
     </form>
 
     <div class="menu-navegacion">
@@ -65,8 +83,8 @@
         <a href="ubicacion sucursal.html">Ubicación Sucursal</a>
         <a href="formulario.html">Formulario</a>
     </div>
+
+    <!-- Enlace al script unificado -->
     <script src="todo.js"></script>
-    <!-- Reloj en la parte superior -->
-<div id="reloj"></div>
 </body>
 </html>

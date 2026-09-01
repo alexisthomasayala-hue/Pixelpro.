@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('formRegistro');
     if (form) {
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío automático para validar y mostrar resumen
+            event.preventDefault(); // Evita que se recargue o busque una ruta externa
 
             const nombre = document.getElementById('nombre');
             const email = document.getElementById('email');
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 esValido = false;
             }
 
-            // Si todo es válido, mostramos el resumen (Punto 7)
+            // Si todo es válido, mostramos el resumen antes de guardar
             if (esValido) {
                 const fechaNac = document.getElementById('fecha_nacimiento') ? document.getElementById('fecha_nacimiento').value : 'No especificada';
                 const generoSeleccionado = document.querySelector('input[name="genero"]:checked') ? document.querySelector('input[name="genero"]:checked').value : 'No especificado';
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     `;
                     contenedorResumen.style.display = 'block';
 
-                    // Acción al confirmar el resumen
+                    // Acción al confirmar el resumen (Guarda en LocalStorage de forma simulada)
                     document.getElementById('confirmarEnvio').addEventListener('click', function() {
                         const datosUsuario = {
                             nombre: nombre.value,
@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ==========================================
     // 3. FECHA Y HORA EN TIEMPO REAL
-    // Busca un elemento con id="reloj" en el HTML
     // ==========================================
     const relojElemento = document.getElementById('reloj');
     if (relojElemento) {
@@ -120,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ==========================================
     // 4. MENÚS INTERACTIVOS (Acordeón o Desplegable)
-    // Funciona con botones que tengan la clase .accordion-btn
     // ==========================================
     const botonesAcordeon = document.querySelectorAll('.accordion-btn');
     botonesAcordeon.forEach(boton => {
@@ -140,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ==========================================
     // 5. GALERÍA DE IMÁGENES (Zoom + Siguiente / Anterior)
-    // Requiere miniaturas con la clase .galeria-img y un modal con id="modalZoom"
     // ==========================================
     const imagenesGaleria = document.querySelectorAll('.galeria-img');
     const modalZoom = document.getElementById('modalZoom');
@@ -183,11 +180,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ==========================================
     // 6. CAMBIAR TEMA DE LA PÁGINA (Modo Oscuro Toggle)
-    // Busca un input checkbox con id="modoOscuroToggle"
     // ==========================================
     const interruptorTema = document.getElementById('modoOscuroToggle');
     
-    // Mantener preferencia guardada en el navegador
     if (localStorage.getItem('temaOscuro') === 'activo') {
         document.body.classList.add('dark-mode');
         if (interruptorTema) interruptorTema.checked = true;
@@ -204,4 +199,4 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-});s
+});
