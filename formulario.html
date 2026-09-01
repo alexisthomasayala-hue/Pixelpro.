@@ -1,47 +1,69 @@
-<link rel="stylesheet" href="todo.css">
-<div>
-    <a href="index.html">Volver al Inicio
-         <h1> Pixelpro🎮🎮</h1>
-    </a>
-</div>
-<form action="/ruta-de-procesamiento" method="POST">
-    
-    <h2>Registro de Usuario🎮🎮</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro | PixelPro🎮</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <form action="/ruta-de-procesamiento" method="POST">
+        <h1>PixelPro🎮 - Registro de Usuario</h1>
 
-  <div>
-    <label for="nombre">Nombre completo:</label>
-    <input type="text" id="nombre" name="nombre" required>
-  </div>
+        <div>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
 
-  <div>
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required>
-  </div>
+        <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
 
-  <div>
-    <label for="password">Contraseña:</label>
-    <input type="password" id="password" name="password" required>
-  </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
 
-  <div>
-    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
-  </div>
+        <div>
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        </div>
 
-  <div>
-    <label>Género:</label>
-    <input type="radio" id="femenino" name="genero" value="femenino">
-    <label for="femenino">Femenino</label>
-    <input type="radio" id="masculino" name="genero" value="masculino">
-    <label for="masculino">Masculino</label>
-  </div>
+        <div style="margin-bottom: 15px; border:none; padding:0;">
+            <label style="display:block; margin-bottom: 5px;">Género:</label>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino" style="margin-right: 15px;">Femenino</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+        </div>
 
-  <div>
-    <input type="checkbox" id="terminos" name="terminos" required>
-    <label for="terminos">Acepto los términos y condiciones</label>
-  </div>
+        <div style="border:none; padding:0; margin-bottom: 15px;">
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos">Acepto los términos y condiciones</label>
+        </div>
 
-  <div>
-    <button type="submit">Registrarse</button>
-  </div>
-</form>
+        <div>
+            <button type="submit">Registrarse</button>
+        </div>
+    </form>
+
+    <div class="menu-navegacion">
+        <a href="blog.html">Blog</a>
+        <a href="configuracion.html">Configuración</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="curso.html">Curso</a>
+        <a href="deseas unirte.html">Deseas Unirte</a>
+        <a href="generos.html">Géneros</a>
+        <a href="logo.html">Logo</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="opiniones.html">Opiniones</a>
+        <a href="perfil jugador.html">Perfil Jugador</a>
+        <a href="precios.html">Precios</a>
+        <a href="preguntas.html">Preguntas</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="index.html">Sobre Nosotros</a>
+        <a href="ubicacion sucursal.html">Ubicación Sucursal</a>
+        <a href="formulario.html">Formulario</a>
+    </div>
+</body>
+</html>
